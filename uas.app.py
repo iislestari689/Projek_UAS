@@ -128,7 +128,7 @@ with grid2:
 
 st.write("---")
 
-# Header Konten Utama (SUDAH DIPERBAIKI DI BAGIAN INI)
+# Header Konten Utama
 col_title, col_logo = st.columns(2)
 with col_title:
     st.subheader("⚖️ Cek Kesehatan Tubuhmu")
@@ -159,14 +159,15 @@ if st.button("🔍 Hitung BMI", use_container_width=True):
 
         st.balloons()
         
+        # --- PERBAIKAN: TEXT ALIGN CENTER PADA KARTU HASIL ---
         res_col1, res_col2 = st.columns(2)
         with res_col1:
             st.markdown(
                 f"""
                 <div style="background-color:{warna}; padding:20px; border-radius:10px; text-align:center; color:white; margin-bottom:20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <h2 style="margin:0; color:white;">BMI Anda: {bmi:.2f}</h2>
-                    <h3 style="margin:5px 0; color:white; font-weight:bold;">{kategori}</h3>
-                    <p style="margin:0; font-size:14px; opacity:0.9;">📅 {waktu_cek}</p>
+                    <h2 style="margin:0; color:white; text-align:center;">BMI Anda: {bmi:.2f}</h2>
+                    <h3 style="margin:5px 0; color:white; font-weight:bold; text-align:center;">{kategori}</h3>
+                    <p style="margin:5px 0 0 0; font-size:14px; opacity:0.9; text-align:center; display:block;">📅 {waktu_cek}</p>
                 </div>
                 """,
                 unsafe_allow_html=True
