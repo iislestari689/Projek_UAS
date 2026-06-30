@@ -128,8 +128,8 @@ with grid2:
 
 st.write("---")
 
-# Header Konten Utama
-col_title, col_logo = st.columns()
+# Header Konten Utama (SUDAH DIPERBAIKI DI BAGIAN INI)
+col_title, col_logo = st.columns(2)
 with col_title:
     st.subheader("⚖️ Cek Kesehatan Tubuhmu")
     st.write("Masukkan angka di bawah untuk memeriksa kondisi indeks massa tubuh Anda.")
@@ -159,7 +159,7 @@ if st.button("🔍 Hitung BMI", use_container_width=True):
 
         st.balloons()
         
-        res_col1, res_col2 = st.columns()
+        res_col1, res_col2 = st.columns(2)
         with res_col1:
             st.markdown(
                 f"""
